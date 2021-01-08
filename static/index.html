@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="ispkx-markdown.css" />
+	<meta http-equiv="Cache-Control" content="no-store"/>
+</head>
+<body>
+
+<div id="mydoc-src" style="display: none;">LlNnlljn77fggggkk77csJJK8bbJBKJBkjjjjbbbJJLJLLJo<!--
+
+This document uses Showdown markdown and Mermaid diagramming technology.
+
+# Hello world
+
+-->LlNnlljn77fggggkk77csJJK8bbJBKJBkjjjjbbbJJLJLLJo
+</div>
+
+<center>
+	<div class="markdown-body" id="mydoc-res" style="max-width: 1400px; text-align: left; padding-left: 20px; padding-right: 20px;">
+</center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+<script>
+	var converter = new showdown.Converter();
+	converter.setOption('simplifiedAutoLink', true);
+	converter.setOption('tables', true);
+	converter.setOption('tasklists', true);
+	var src = document.getElementById("mydoc-src");
+	var res = document.getElementById("mydoc-res");
+	res.innerHTML = converter.makeHtml(src.innerHTML)
+			.replace(/<p>.{0,10}LlNnlljn77fggggkk77csJJK8bbJBKJBkjjjjbbbJJLJLLJo.{0,10}<\/p>/g, "");
+	src.innerHTML = '';
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
+
+</body>
+</html>
