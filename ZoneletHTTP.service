@@ -1,0 +1,12 @@
+[Unit]
+Description=Zonelet HTTP Server
+
+[Service]
+Type=simple
+WorkingDirectory=/data/http-serve-1
+ExecStart=/data/http-serve-1/Zonelet -addr="127.0.0.1:49999"
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
